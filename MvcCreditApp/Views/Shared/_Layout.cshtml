@@ -26,6 +26,21 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
+                   
+                    <ul class="nav navbar-nav">
+                                                 
+                        <li>@Html.ActionLink("Главная", "Index", "Home")</li>
+                         
+                         <li>@Html.ActionLink("Послать заявку", "CreateBid", "Home")</li>
+                         
+                         <li>@Html.ActionLink("Просмотреть заявки", "Index", "Bids")</li>
+                    
+                         <li>@Html.ActionLink("Кредиты", "Index", "Credits")</li>
+                     </ul>
+
+                    
+                    
+                    
                     <partial name="_LoginPartial" />
                 </div>
             </div>
