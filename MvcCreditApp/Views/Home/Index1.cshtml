@@ -1,0 +1,24 @@
+﻿
+<div>
+	<h5>Просмотр заявителей по кредиту</h5>
+</div>
+<div id="results">
+	<form data-ajax="true" data-ajax-url="/Home/BidSearch"
+		  data-ajax-update="#results" data-ajax-mode="after">
+		<input type="text" name="Name" />
+		<input type="submit" value="Поиск" />
+	</form>
+</div>
+@section scripts {
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryajax-unobtrusive/3.2.6/jquery.unobtrusive-ajax.js"
+			integrity="sha256-v2nySZafnswY87um3ymbg7p9f766IQspC5oqaqZVX2c="
+			crossorigin="anonymous"></script>
+}
+
+
+
+
+
+
+
+
