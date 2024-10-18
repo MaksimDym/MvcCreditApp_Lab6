@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MvcCreditApp.Data;
 using MvcCreditApp.Models;
@@ -57,7 +58,7 @@ namespace MvcCreditApp.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-
+        [Authorize]
         [HttpGet]
         public ActionResult CreateBid()
         {
@@ -66,7 +67,7 @@ namespace MvcCreditApp.Controllers
             ViewBag.Bids = allBids;
             return View();
         }
-
+       
         [HttpPost]
         public string CreateBid(Bid newBid)
         {
